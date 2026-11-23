@@ -78,6 +78,12 @@ class SessionItem(BaseModel):
     current: bool
 
 
+class SessionListOut(BaseModel):
+    """Envelope for the session list (07-API.md §1)."""
+
+    items: list[SessionItem]
+
+
 class ProfileUpdate(BaseModel):
     display_name: str | None = Field(default=None, max_length=200)
     timezone: str | None = Field(default=None, max_length=64)

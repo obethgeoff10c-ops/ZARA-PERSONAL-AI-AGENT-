@@ -6,7 +6,7 @@ import uuid
 from datetime import datetime
 from typing import Annotated
 
-from fastapi import APIRouter, Query, Request, Response, status
+from fastapi import APIRouter, Depends, Query, Request, Response, status
 
 from zara.api.deps import (
     DbDep,
@@ -58,6 +58,7 @@ async def list_tasks(
     response_model=TaskOut,
     status_code=status.HTTP_201_CREATED,
     summary="Create a task",
+    dependencies=[Depends(_Writes)],
 )
 async def create_task(
     payload: TaskCreate,
@@ -80,7 +81,12 @@ async def get_task(task_id: uuid.UUID, principal: PrincipalDep, db: DbDep) -> Ta
     return TaskOut.model_validate(await service.get_task(db, principal, task_id))
 
 
-@router.patch("/{task_id}", response_model=TaskOut, summary="Update a task")
+@router.patch(
+    "/{task_id}",
+    response_model=TaskOut,
+    summary="Update a task",
+    dependencies=[Depends(_Writes)],
+)
 async def update_task(
     task_id: uuid.UUID,
     payload: TaskUpdate,
@@ -104,6 +110,7 @@ async def update_task(
     "/{task_id}",
     status_code=status.HTTP_204_NO_CONTENT,
     summary="Delete a task",
+    dependencies=[Depends(_Writes)],
 )
 async def delete_task(
     task_id: uuid.UUID,
@@ -116,7 +123,12 @@ async def delete_task(
     return Response(status_code=status.HTTP_204_NO_CONTENT)
 
 
-@router.post("/{task_id}/complete", response_model=TaskOut, summary="Complete a task")
+@router.post(
+    "/{task_id}/complete",
+    response_model=TaskOut,
+    summary="Complete a task",
+    dependencies=[Depends(_Writes)],
+)
 async def complete_task(
     task_id: uuid.UUID,
     _payload: TaskCompleteIn,

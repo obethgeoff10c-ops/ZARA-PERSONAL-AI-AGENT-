@@ -22,6 +22,7 @@ from zara.schemas import (
     DevTokenOut,
     SessionCreateIn,
     SessionItem,
+    SessionListOut,
     SessionOut,
     UserOut,
 )
@@ -150,22 +151,24 @@ async def delete_current_session(
     return Response(status_code=status.HTTP_204_NO_CONTENT)
 
 
-@router.get("/sessions", response_model=list[SessionItem], tags=["auth"])
-async def get_sessions(principal: PrincipalDep, db: DbDep) -> list[SessionItem]:
+@router.get("/sessions", response_model=SessionListOut, tags=["auth"])
+async def get_sessions(principal: PrincipalDep, db: DbDep) -> SessionListOut:
     rows = await list_sessions(db, principal)
-    return [
-        SessionItem(
-            id=row.id,
-            device_label=row.device_label,
-            ip=str(row.ip) if row.ip is not None else None,
-            user_agent=row.user_agent,
-            created_at=row.created_at,
-            last_used_at=row.last_used_at,
-            expires_at=row.expires_at,
-            current=row.id == principal.session_id,
-        )
-        for row in rows
-    ]
+    return SessionListOut(
+        items=[
+            SessionItem(
+                id=row.id,
+                device_label=row.device_label,
+                ip=str(row.ip) if row.ip is not None else None,
+                user_agent=row.user_agent,
+                created_at=row.created_at,
+                last_used_at=row.last_used_at,
+                expires_at=row.expires_at,
+                current=row.id == principal.session_id,
+            )
+            for row in rows
+        ]
+    )
 
 
 @router.delete(

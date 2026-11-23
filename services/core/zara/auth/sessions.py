@@ -5,7 +5,7 @@ from __future__ import annotations
 import uuid
 from datetime import UTC, datetime, timedelta
 
-from sqlalchemy import select
+from sqlalchemy import select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from zara.auth.principal import Principal
@@ -80,6 +80,32 @@ async def revoke_session(
     return True
 
 
+async def revoke_all_sessions(
+    db: AsyncSession,
+    principal: Principal,
+    *,
+    reason: str = "user_requested",
+) -> None:
+    """Revoke every active session owned by ``principal``."""
+    await db.execute(
+        update(AuthSession)
+        .where(
+            AuthSession.tenant_id == principal.tenant_id,
+            AuthSession.user_id == principal.user_id,
+            AuthSession.revoked_at.is_(None),
+        )
+        .values(revoked_at=datetime.now(UTC), revoke_reason=reason)
+    )
+
+
 async def revoke_current(db: AsyncSession, principal: Principal) -> None:
+    """Sign the caller out.
+
+    A session-token caller is signed out of that one session. A JWT/IdP caller
+    has no single session id, so signing out revokes *all* of the user's active
+    sessions instead of silently doing nothing.
+    """
     if principal.session_id is not None:
         await revoke_session(db, principal, principal.session_id, reason="sign_out")
+        return
+    await revoke_all_sessions(db, principal, reason="sign_out")

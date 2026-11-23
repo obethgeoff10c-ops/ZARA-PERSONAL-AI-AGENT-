@@ -17,6 +17,7 @@ from zara.schemas.auth import (
     ProfileUpdate,
     SessionCreateIn,
     SessionItem,
+    SessionListOut,
     SessionOut,
     UserOut,
 )
@@ -87,6 +88,7 @@ __all__ = [
     "RunOut",
     "SessionCreateIn",
     "SessionItem",
+    "SessionListOut",
     "SessionOut",
     "TaskCompleteIn",
     "TaskCreate",

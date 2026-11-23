@@ -150,6 +150,9 @@ async def principal_from_session_token(token: str) -> Principal:
             auth_provider=user.auth_provider,
             external_auth_id=user.external_auth_id,
             session_id=auth_session.id,
+            # The session's creation time is the last moment the user proved their
+            # identity; step-up checks compare against it.
+            authenticated_at=auth_session.created_at,
         )
 
 
