@@ -8,8 +8,11 @@ Run with ``ZARA_INTEGRATION=1`` and a migrated database:
 from __future__ import annotations
 
 import os
+from pathlib import Path
 
 import pytest
+from alembic.config import Config
+from alembic.script import ScriptDirectory
 from sqlalchemy import text
 from zara.config import get_settings
 from zara.db.engine import create_engine
@@ -86,4 +89,14 @@ async def test_migrations_are_at_head() -> None:
     finally:
         await engine.dispose()
 
-    assert version == "0001"
+    assert version == _head_revision()
+
+
+def _head_revision() -> str:
+    """The revision Alembic considers head (never hardcode a revision here)."""
+    core_root = Path(__file__).resolve().parents[2]
+    config = Config(str(core_root / "alembic.ini"))
+    # ``script_location`` in alembic.ini is relative to the CWD; pin it so this
+    # works no matter where pytest was invoked from.
+    config.set_main_option("script_location", str(core_root / "alembic"))
+    return ScriptDirectory.from_config(config).get_current_head()

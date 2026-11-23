@@ -11,8 +11,17 @@ BASE = {
 
 
 def test_defaults_are_local_and_safe(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.delenv("ENVIRONMENT", raising=False)
-    monkeypatch.delenv("REDIS_URL", raising=False)
+    # Settings reads process environment variables, so clear anything a shell or
+    # CI runner may have exported; otherwise "defaults" silently become whatever
+    # the developer happened to have configured.
+    for name in (
+        "ENVIRONMENT",
+        "LOG_LEVEL",
+        "REDIS_URL",
+        "CORS_ORIGINS",
+        "ALLOWED_HOSTS",
+    ):
+        monkeypatch.delenv(name, raising=False)
     settings = Settings(**BASE)
 
     assert settings.environment == "local"
