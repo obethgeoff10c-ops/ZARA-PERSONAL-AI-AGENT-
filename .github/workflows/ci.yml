@@ -1,0 +1,102 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  DATABASE_URL: postgresql+asyncpg://zara:zara_local_dev@localhost:5432/zara
+  ENVIRONMENT: test
+  LOG_LEVEL: WARNING
+  CORS_ORIGINS: http://localhost:3000
+  ALLOWED_HOSTS: localhost,127.0.0.1,testserver
+
+jobs:
+  api:
+    name: API (lint, types, unit)
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: services/core
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.13.7"
+          enable-cache: true
+      - run: uv sync --frozen --python 3.12
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run mypy zara
+      - run: uv run lint-imports
+      - run: uv run pytest tests/unit --cov=zara --cov-report=term-missing --cov-fail-under=80
+      - name: Migration SQL is valid
+        run: uv run alembic upgrade head --sql > /tmp/schema.sql
+      - uses: actions/upload-artifact@v4
+        with:
+          name: migration-sql
+          path: /tmp/schema.sql
+          retention-days: 7
+
+  integration:
+    name: API integration (PostgreSQL + pgvector)
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: services/core
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_DB: zara
+          POSTGRES_USER: zara
+          POSTGRES_PASSWORD: zara_local_dev
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U zara -d zara"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.13.7"
+          enable-cache: true
+      - run: uv sync --frozen --python 3.12
+      - run: uv run alembic upgrade head
+      - run: uv run pytest tests/integration -q
+        env:
+          ZARA_INTEGRATION: "1"
+
+  web:
+    name: Web (lint, types, tests, build)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+
+  docker:
+    name: Compose config and image builds
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose config -q
+      - run: docker compose build

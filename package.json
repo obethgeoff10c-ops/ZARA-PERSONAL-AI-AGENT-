@@ -1,0 +1,27 @@
+{
+  "name": "zara",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ZARA monorepo — persistent, proactive personal-intelligence agent",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "apps/web",
+    "packages/api-client"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @zara/web",
+    "build": "npm run build --workspace @zara/web",
+    "lint": "npm run lint --workspace @zara/web && npm run lint --workspace @zara/api-client",
+    "typecheck": "npm run typecheck --workspace @zara/api-client && npm run typecheck --workspace @zara/web",
+    "test": "npm run test --workspace @zara/web",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "api:export": "cd services/core && uv run python scripts/export_openapi.py ../../packages/api-client/openapi.json",
+    "api:types": "npm run generate --workspace @zara/api-client"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
+}

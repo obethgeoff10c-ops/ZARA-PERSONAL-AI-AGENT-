@@ -1,0 +1,22 @@
+node_modules/
+.next/
+out/
+build/
+dist/
+coverage/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+package-lock.json
+packages/api-client/src/schema.d.ts
+packages/api-client/openapi.json
+next-env.d.ts
+
+# import-linter
+.import_linter_cache/
+
+# Normative, read-only specifications
+docs/architecture/0*.md
