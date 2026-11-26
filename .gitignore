@@ -32,3 +32,7 @@ coverage/
 
 # import-linter
 .import_linter_cache/
+
+# Redis database dumps
+*.rdb
+dump.rdb

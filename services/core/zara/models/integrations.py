@@ -64,6 +64,33 @@ class Integration(UUIDPkMixin, TenantScopedMixin, UserScopedMixin, TimestampsMix
     revoked_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
 
+class OAuthState(UUIDPkMixin, TenantScopedMixin, UserScopedMixin, Base):
+    """Single-use, server-side OAuth state with the encrypted PKCE verifier."""
+
+    __tablename__ = "oauth_states"
+    __table_args__ = (
+        CheckConstraint("provider IN ('gmail','gcal','gdrive','github')", name="provider"),
+        Index("ix_oauth_states_user_created", "user_id", "created_at"),
+        {"schema": "integrations"},
+    )
+
+    state_hash: Mapped[bytes] = mapped_column(LargeBinary, nullable=False, unique=True)
+    provider: Mapped[str] = mapped_column(Text, nullable=False)
+    requested_scopes: Mapped[list[str]] = mapped_column(
+        ARRAY(Text), nullable=False, server_default=text("'{}'::text[]")
+    )
+    code_verifier_ct: Mapped[bytes] = mapped_column(LargeBinary, nullable=False)
+    dek_wrapped: Mapped[bytes] = mapped_column(LargeBinary, nullable=False)
+    kms_key_id: Mapped[str] = mapped_column(Text, nullable=False)
+    enc_version: Mapped[int] = mapped_column(SmallInteger, nullable=False, server_default=text("1"))
+    redirect_after: Mapped[str | None] = mapped_column(Text)
+    expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    used_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False, server_default=text("now()")
+    )
+
+
 class OAuthCredential(UUIDPkMixin, TenantScopedMixin, TimestampsMixin, Base):
     __tablename__ = "oauth_credentials"
     __table_args__ = ({"schema": "integrations"},)

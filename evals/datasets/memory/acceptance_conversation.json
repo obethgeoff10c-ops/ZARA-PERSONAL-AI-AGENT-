@@ -1,0 +1,38 @@
+{
+  "description": "Five facts spread across messages; the assistant must combine them after a restart and cite only verbatim evidence.",
+  "forbidden_phrases": [
+    "hotel",
+    "booked",
+    "reservation"
+  ],
+  "id": "acceptance-lisbon-001",
+  "messages": [
+    {
+      "id": "msg-0",
+      "text": "I am planning a trip to Lisbon in March."
+    },
+    {
+      "id": "msg-1",
+      "text": "My sister Maya lives in Lisbon."
+    },
+    {
+      "id": "msg-2",
+      "text": "I prefer morning flights."
+    },
+    {
+      "id": "msg-3",
+      "text": "My budget for the Lisbon trip is 1200 euros."
+    },
+    {
+      "id": "msg-4",
+      "text": "Maya's birthday is on March 14."
+    }
+  ],
+  "min_lisbon_matches": 2,
+  "query": "Lisbon trip budget in March",
+  "required_phrases": [
+    "lisbon",
+    "1200 euros",
+    "maya"
+  ]
+}

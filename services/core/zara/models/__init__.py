@@ -17,10 +17,12 @@ from zara.models.graph import Entity, EntityMention, EntityRelationship
 from zara.models.integrations import (
     Integration,
     OAuthCredential,
+    OAuthState,
     SyncCursor,
     WebhookSubscription,
 )
 from zara.models.memory import (
+    BlockedFact,
     MemoryEmbedding,
     MemoryItem,
     MemoryRevision,
@@ -35,6 +37,7 @@ __all__ = [
     "Approval",
     "AuditLog",
     "AuthSession",
+    "BlockedFact",
     "Contact",
     "Conversation",
     "Entity",
@@ -51,6 +54,7 @@ __all__ = [
     "Message",
     "Notification",
     "OAuthCredential",
+    "OAuthState",
     "Project",
     "RetrievalLog",
     "RunEvent",

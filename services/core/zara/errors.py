@@ -102,3 +102,12 @@ def rate_limited(
         title="Rate limit exceeded",
         headers=merged,
     )
+
+
+def upstream_error(detail: str = "The upstream provider rejected the request.") -> AppError:
+    return AppError(
+        detail,
+        status_code=502,
+        code="upstream_error",
+        title="Upstream provider error",
+    )

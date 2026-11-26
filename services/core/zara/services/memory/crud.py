@@ -1,4 +1,4 @@
-"""Memory and provenance persistence."""
+"""Memory and provenance persistence (CRUD layer)."""
 
 from __future__ import annotations
 
@@ -7,14 +7,16 @@ import uuid
 from datetime import UTC, datetime
 from typing import Any
 
-from sqlalchemy import func, or_, select
+from sqlalchemy import delete, func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from zara.api.pagination import paginate
 from zara.auth.principal import Principal
 from zara.errors import conflict, not_found, precondition_failed, validation_failed
-from zara.models import MemoryItem, MemoryRevision, MemorySource
+from zara.models import BlockedFact, MemoryEmbedding, MemoryItem, MemoryRevision, MemorySource
 from zara.services.audit import record_event
+from zara.services.memory.embeddings import store_current_embedding
+from zara.services.memory.keys import derive_canonical_key
 
 _ALLOWED_KINDS = {
     "episodic",
@@ -130,6 +132,13 @@ async def create_memory(
     )
     db.add(memory)
     await db.flush()
+    await store_current_embedding(
+        db,
+        tenant_id=principal.tenant_id,
+        user_id=principal.user_id,
+        memory_id=memory.id,
+        text=f"{memory.title or ''} {memory.content}".strip(),
+    )
     await record_event(
         db,
         principal,
@@ -163,6 +172,19 @@ async def update_memory(
         new_content = changes.pop("content")
         memory.content = new_content
         memory.content_hash = _hash_content(new_content)
+        new_key = derive_canonical_key(new_content)
+        clash = (
+            await db.execute(
+                select(MemoryItem.id).where(
+                    MemoryItem.tenant_id == principal.tenant_id,
+                    MemoryItem.user_id == principal.user_id,
+                    MemoryItem.canonical_key == new_key,
+                    MemoryItem.id != memory.id,
+                    MemoryItem.status == "active",
+                )
+            )
+        ).first()
+        memory.canonical_key = None if clash is not None else new_key
     if "pinned" in changes:
         memory.user_pinned = bool(changes.pop("pinned"))
     if "payload" in changes:
@@ -177,6 +199,14 @@ async def update_memory(
     if content_changed:
         await snapshot_revision(db, memory)
     await db.flush()
+    if content_changed:
+        await store_current_embedding(
+            db,
+            tenant_id=principal.tenant_id,
+            user_id=principal.user_id,
+            memory_id=memory.id,
+            text=f"{memory.title or ''} {memory.content}".strip(),
+        )
     await record_event(
         db,
         principal,
@@ -199,6 +229,33 @@ async def delete_memory(
 ) -> None:
     memory = await get_memory(db, principal, memory_id)
     if block:
+        # Negative memory: remember the hash so a later sync cannot re-create
+        # the fact, and drop the embedding immediately (03 §7).
+        existing = (
+            await db.execute(
+                select(BlockedFact.id).where(
+                    BlockedFact.tenant_id == principal.tenant_id,
+                    BlockedFact.user_id == principal.user_id,
+                    BlockedFact.fact_hash == memory.content_hash,
+                )
+            )
+        ).first()
+        if existing is None:
+            db.add(
+                BlockedFact(
+                    tenant_id=principal.tenant_id,
+                    user_id=principal.user_id,
+                    fact_hash=memory.content_hash,
+                    canonical_key=memory.canonical_key,
+                    reason="deleted",
+                )
+            )
+        await db.execute(
+            delete(MemoryEmbedding).where(
+                MemoryEmbedding.memory_id == memory.id,
+                MemoryEmbedding.tenant_id == principal.tenant_id,
+            )
+        )
         memory.status = "deleted"
         await db.flush()
     else:
@@ -225,6 +282,20 @@ async def confirm_memory(
     memory = await get_memory(db, principal, memory_id)
     if memory.status != "suggested":
         raise conflict("Only suggested memories can be confirmed.")
+    if memory.canonical_key is not None:
+        clash = (
+            await db.execute(
+                select(MemoryItem.id).where(
+                    MemoryItem.tenant_id == principal.tenant_id,
+                    MemoryItem.user_id == principal.user_id,
+                    MemoryItem.canonical_key == memory.canonical_key,
+                    MemoryItem.id != memory.id,
+                    MemoryItem.status == "active",
+                )
+            )
+        ).first()
+        if clash is not None:
+            memory.canonical_key = None
     memory.status = "active"
     memory.confidence = max(memory.confidence, 0.9)
     await db.flush()

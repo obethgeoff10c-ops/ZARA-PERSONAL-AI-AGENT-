@@ -367,6 +367,40 @@ export interface paths {
         patch: operations["update_settings_api_v1_integrations__integration_id__settings_patch"];
         trace?: never;
     };
+    "/api/v1/integrations/{provider}/callback": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** OAuth redirect callback (state-bound, no bearer header) */
+        get: operations["callback_api_v1_integrations__provider__callback_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/integrations/{provider}/connect": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Start an OAuth connection (authorization URL + state) */
+        post: operations["connect_api_v1_integrations__provider__connect_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/me": {
         parameters: {
             query?: never;
@@ -448,6 +482,74 @@ export interface paths {
         put?: never;
         /** Create a memory item */
         post: operations["create_memory_api_v1_memory_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/memory/consolidate": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Run memory decay/archive/expiration for the current user */
+        post: operations["consolidate_api_v1_memory_consolidate_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/memory/extract": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Extract and store memories from a text span */
+        post: operations["extract_memory_api_v1_memory_extract_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/memory/personalize": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Contextual user profile for personalization */
+        get: operations["personalize_api_v1_memory_personalize_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/memory/retrieve": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Hybrid memory retrieval (semantic + keyword + entity + recency) */
+        post: operations["retrieve_memory_api_v1_memory_retrieve_post"];
         delete?: never;
         options?: never;
         head?: never;
@@ -964,6 +1066,24 @@ export interface components {
              */
             status: "ok" | "error";
         };
+        /** ConsolidationOut */
+        ConsolidationOut: {
+            /**
+             * Archived
+             * @default 0
+             */
+            archived: number;
+            /**
+             * Decayed
+             * @default 0
+             */
+            decayed: number;
+            /**
+             * Expired
+             * @default 0
+             */
+            expired: number;
+        };
         /** ConversationCreate */
         ConversationCreate: {
             /** Title */
@@ -1060,6 +1180,25 @@ export interface components {
             status: "ok";
             /** Version */
             version: string;
+        };
+        /** IntegrationConnectIn */
+        IntegrationConnectIn: {
+            /** Redirect After */
+            redirect_after?: string | null;
+            /** Scopes */
+            scopes?: string[] | null;
+        };
+        /** IntegrationConnectOut */
+        IntegrationConnectOut: {
+            /** Authorization Url */
+            authorization_url: string;
+            /**
+             * Expires At
+             * Format: date-time
+             */
+            expires_at: string;
+            /** State */
+            state: string;
         };
         /** IntegrationOut */
         IntegrationOut: {
@@ -1194,6 +1333,50 @@ export interface components {
             /** Version */
             version: number;
         };
+        /**
+         * MemoryExtractIn
+         * @description Raw text span to run through the extraction pipeline.
+         */
+        MemoryExtractIn: {
+            /** Message Id */
+            message_id?: string | null;
+            /** Reference Time */
+            reference_time?: string | null;
+            /** Run Id */
+            run_id?: string | null;
+            /** Source Id */
+            source_id: string;
+            /**
+             * Source Type
+             * @default message
+             */
+            source_type: string;
+            /** Text */
+            text: string;
+            /**
+             * Trust Level
+             * @default user
+             */
+            trust_level: string;
+        };
+        /** MemoryExtractOut */
+        MemoryExtractOut: {
+            /** Accepted */
+            accepted?: components["schemas"]["MemoryOut"][];
+            /** Rejected */
+            rejected?: components["schemas"]["MemoryExtractionRejection"][];
+            /** Suggested */
+            suggested?: components["schemas"]["MemoryOut"][];
+        };
+        /** MemoryExtractionRejection */
+        MemoryExtractionRejection: {
+            /** Candidate */
+            candidate: {
+                [key: string]: unknown;
+            };
+            /** Reason */
+            reason: string;
+        };
         /** MemoryOut */
         MemoryOut: {
             /** Confidence */
@@ -1250,6 +1433,82 @@ export interface components {
             valid_to: string | null;
             /** Version */
             version: number;
+        };
+        /** MemoryRetrievalSource */
+        MemoryRetrievalSource: {
+            /** Observed At */
+            observed_at?: string | null;
+            /** Quote */
+            quote?: string | null;
+            /** Source Type */
+            source_type: string;
+        };
+        /** MemoryRetrieveIn */
+        MemoryRetrieveIn: {
+            /** Domains */
+            domains?: string[];
+            /** Entity Ids */
+            entity_ids?: string[];
+            /**
+             * Include History
+             * @default false
+             */
+            include_history: boolean;
+            /**
+             * K
+             * @default 12
+             */
+            k: number;
+            /** Kinds */
+            kinds?: string[] | null;
+            /** Query */
+            query: string;
+            /**
+             * Token Budget
+             * @default 1800
+             */
+            token_budget: number;
+        };
+        /** MemoryRetrieveOut */
+        MemoryRetrieveOut: {
+            /** Items */
+            items?: components["schemas"]["MemoryRetrievedOut"][];
+            /** Retrieval Log Id */
+            retrieval_log_id?: string | null;
+        };
+        /** MemoryRetrievedOut */
+        MemoryRetrievedOut: {
+            /** Components */
+            components: {
+                [key: string]: number;
+            };
+            /** Confidence */
+            confidence: number;
+            /** Content */
+            content: string;
+            /** Due At */
+            due_at?: string | null;
+            /**
+             * Id
+             * Format: uuid
+             */
+            id: string;
+            /** Importance */
+            importance: number;
+            /** Kind */
+            kind: string;
+            /** Occurred At */
+            occurred_at?: string | null;
+            /** Score */
+            score: number;
+            /** Sensitivity */
+            sensitivity: string;
+            /** Sources */
+            sources?: components["schemas"]["MemoryRetrievalSource"][];
+            /** Status */
+            status: string;
+            /** Title */
+            title: string | null;
         };
         /** MemorySearchIn */
         MemorySearchIn: {
@@ -1456,6 +1715,74 @@ export interface components {
             permissions: string[];
             /** Role */
             role: string;
+        };
+        /** PersonalizationMemoryOut */
+        PersonalizationMemoryOut: {
+            /** Confidence */
+            confidence: number;
+            /** Content */
+            content: string;
+            /** Due At */
+            due_at?: string | null;
+            /**
+             * Id
+             * Format: uuid
+             */
+            id: string;
+            /** Importance */
+            importance: number;
+            /** Kind */
+            kind: string;
+            /** Occurred At */
+            occurred_at?: string | null;
+            /** Score */
+            score: number;
+            /** Sources */
+            sources?: components["schemas"]["MemoryRetrievalSource"][];
+            /** Title */
+            title: string | null;
+        };
+        /** PersonalizeOut */
+        PersonalizeOut: {
+            /** Commitments */
+            commitments?: components["schemas"]["PersonalizationMemoryOut"][];
+            /** Communication Style */
+            communication_style?: string | null;
+            /**
+             * Generated At
+             * Format: date-time
+             */
+            generated_at: string;
+            /** Goals */
+            goals?: components["schemas"]["PersonalizationMemoryOut"][];
+            /**
+             * Locale
+             * @default en
+             */
+            locale: string;
+            /** Preferences */
+            preferences?: components["schemas"]["PersonalizationMemoryOut"][];
+            /** Projects */
+            projects?: components["schemas"]["PersonalizationMemoryOut"][];
+            /** Recent Memories */
+            recent_memories?: components["schemas"]["PersonalizationMemoryOut"][];
+            /** Relevant People */
+            relevant_people?: components["schemas"]["PersonalizationMemoryOut"][];
+            /**
+             * Tenant Id
+             * Format: uuid
+             */
+            tenant_id: string;
+            /**
+             * Timezone
+             * @default UTC
+             */
+            timezone: string;
+            /**
+             * User Id
+             * Format: uuid
+             */
+            user_id: string;
         };
         /** PreferencesOut */
         PreferencesOut: {
@@ -2967,6 +3294,93 @@ export interface operations {
             };
         };
     };
+    callback_api_v1_integrations__provider__callback_get: {
+        parameters: {
+            query: {
+                code: string;
+                state: string;
+            };
+            header?: never;
+            path: {
+                provider: "gmail" | "gcal" | "gdrive" | "github";
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+            /** @description RFC 9457 problem details */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/problem+json": components["schemas"]["ProblemDetail"];
+                };
+            };
+        };
+    };
+    connect_api_v1_integrations__provider__connect_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                provider: "gmail" | "gcal" | "gdrive" | "github";
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["IntegrationConnectIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["IntegrationConnectOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+            /** @description RFC 9457 problem details */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/problem+json": components["schemas"]["ProblemDetail"];
+                };
+            };
+        };
+    };
     get_me_api_v1_me_get: {
         parameters: {
             query?: never;
@@ -3216,6 +3630,159 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["MemoryOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+            /** @description RFC 9457 problem details */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/problem+json": components["schemas"]["ProblemDetail"];
+                };
+            };
+        };
+    };
+    consolidate_api_v1_memory_consolidate_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ConsolidationOut"];
+                };
+            };
+            /** @description RFC 9457 problem details */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/problem+json": components["schemas"]["ProblemDetail"];
+                };
+            };
+        };
+    };
+    extract_memory_api_v1_memory_extract_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["MemoryExtractIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MemoryExtractOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+            /** @description RFC 9457 problem details */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/problem+json": components["schemas"]["ProblemDetail"];
+                };
+            };
+        };
+    };
+    personalize_api_v1_memory_personalize_get: {
+        parameters: {
+            query?: {
+                context?: string | null;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PersonalizeOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+            /** @description RFC 9457 problem details */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/problem+json": components["schemas"]["ProblemDetail"];
+                };
+            };
+        };
+    };
+    retrieve_memory_api_v1_memory_retrieve_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["MemoryRetrieveIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MemoryRetrieveOut"];
                 };
             };
             /** @description Validation Error */

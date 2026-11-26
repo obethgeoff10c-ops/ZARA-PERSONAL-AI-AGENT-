@@ -149,13 +149,21 @@ async def edit_and_approve(
 
     base_args = dict(execution.args) if execution is not None else {}
     merged = {**base_args, **edits}
-    approval.edited_args_hash = args_hash_for(merged)
+    edited_hash = args_hash_for(merged)
+    approval.edited_args_hash = edited_hash
     approval.status = "edited_approved"
     approval.decided_at = datetime.now(UTC)
     approval.decided_via = "web_edit"
     approval.decision_note = note
     approval.step_up_verified = (approval.risk_tier or 0) >= 4
-    approval.preview = {**approval.preview, "edited_fields": sorted(edits)}
+    approval.preview = {
+        **approval.preview,
+        "edited_fields": sorted(edits),
+        "_args": merged,
+    }
+    if execution is not None:
+        execution.args = merged
+        execution.args_hash = edited_hash
     await db.flush()
     await record_event(
         db,

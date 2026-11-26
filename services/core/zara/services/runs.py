@@ -179,6 +179,13 @@ async def event_replay_floor(db: AsyncSession, principal: Principal, run_id: uui
     return int(maximum or 0)
 
 
+async def append_event(
+    db: AsyncSession, run: AgentRun, event_type: str, data: dict[str, Any]
+) -> RunEvent:
+    """Public event writer used by the agent graph (persist before emit)."""
+    return await _append_event(db, run, event_type, data)
+
+
 async def _append_event(
     db: AsyncSession, run: AgentRun, event_type: str, data: dict[str, Any]
 ) -> RunEvent:

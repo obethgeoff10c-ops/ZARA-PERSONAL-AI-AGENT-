@@ -1,0 +1,300 @@
+{"expected_kind": "preference", "expected_quote": "I prefer concise updates for the Concise sync.", "id": "ex-0001", "text": "I prefer concise updates for the Concise sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer concise meetings for the Concise sync.", "id": "ex-0002", "text": "I prefer concise meetings for the Concise sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer concise reports for the Concise sync.", "id": "ex-0003", "text": "I prefer concise reports for the Concise sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer concise summaries for the Concise sync.", "id": "ex-0004", "text": "I prefer concise summaries for the Concise sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer concise reviews for the Concise sync.", "id": "ex-0005", "text": "I prefer concise reviews for the Concise sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer detailed updates for the Detailed sync.", "id": "ex-0006", "text": "I prefer detailed updates for the Detailed sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer detailed meetings for the Detailed sync.", "id": "ex-0007", "text": "I prefer detailed meetings for the Detailed sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer detailed reports for the Detailed sync.", "id": "ex-0008", "text": "I prefer detailed reports for the Detailed sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer detailed summaries for the Detailed sync.", "id": "ex-0009", "text": "I prefer detailed summaries for the Detailed sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer detailed reviews for the Detailed sync.", "id": "ex-0010", "text": "I prefer detailed reviews for the Detailed sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer weekly updates for the Weekly sync.", "id": "ex-0011", "text": "I prefer weekly updates for the Weekly sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer weekly meetings for the Weekly sync.", "id": "ex-0012", "text": "I prefer weekly meetings for the Weekly sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer weekly reports for the Weekly sync.", "id": "ex-0013", "text": "I prefer weekly reports for the Weekly sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer weekly summaries for the Weekly sync.", "id": "ex-0014", "text": "I prefer weekly summaries for the Weekly sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer weekly reviews for the Weekly sync.", "id": "ex-0015", "text": "I prefer weekly reviews for the Weekly sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer async updates for the Async sync.", "id": "ex-0016", "text": "I prefer async updates for the Async sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer async meetings for the Async sync.", "id": "ex-0017", "text": "I prefer async meetings for the Async sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer async reports for the Async sync.", "id": "ex-0018", "text": "I prefer async reports for the Async sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer async summaries for the Async sync.", "id": "ex-0019", "text": "I prefer async summaries for the Async sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer async reviews for the Async sync.", "id": "ex-0020", "text": "I prefer async reviews for the Async sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer written updates for the Written sync.", "id": "ex-0021", "text": "I prefer written updates for the Written sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer written meetings for the Written sync.", "id": "ex-0022", "text": "I prefer written meetings for the Written sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer written reports for the Written sync.", "id": "ex-0023", "text": "I prefer written reports for the Written sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer written summaries for the Written sync.", "id": "ex-0024", "text": "I prefer written summaries for the Written sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer written reviews for the Written sync.", "id": "ex-0025", "text": "I prefer written reviews for the Written sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer brief updates for the Brief sync.", "id": "ex-0026", "text": "I prefer brief updates for the Brief sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer brief meetings for the Brief sync.", "id": "ex-0027", "text": "I prefer brief meetings for the Brief sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer brief reports for the Brief sync.", "id": "ex-0028", "text": "I prefer brief reports for the Brief sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer brief summaries for the Brief sync.", "id": "ex-0029", "text": "I prefer brief summaries for the Brief sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer brief reviews for the Brief sync.", "id": "ex-0030", "text": "I prefer brief reviews for the Brief sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer structured updates for the Structured sync.", "id": "ex-0031", "text": "I prefer structured updates for the Structured sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer structured meetings for the Structured sync.", "id": "ex-0032", "text": "I prefer structured meetings for the Structured sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer structured reports for the Structured sync.", "id": "ex-0033", "text": "I prefer structured reports for the Structured sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer structured summaries for the Structured sync.", "id": "ex-0034", "text": "I prefer structured summaries for the Structured sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer structured reviews for the Structured sync.", "id": "ex-0035", "text": "I prefer structured reviews for the Structured sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer informal updates for the Informal sync.", "id": "ex-0036", "text": "I prefer informal updates for the Informal sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer informal meetings for the Informal sync.", "id": "ex-0037", "text": "I prefer informal meetings for the Informal sync.", "trust_level": "user"}
+{"expected_kind": "preference", "expected_quote": "I prefer informal reports for the Informal sync.", "id": "ex-0038", "text": "I prefer informal reports for the Informal sync.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to launch the Atlas project by January.", "id": "ex-0039", "text": "My goal is to launch the Atlas project by January.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to launch the Borealis roadmap by February.", "id": "ex-0040", "text": "My goal is to launch the Borealis roadmap by February.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to launch the Cedar launch by March.", "id": "ex-0041", "text": "My goal is to launch the Cedar launch by March.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to launch the Delta migration by April.", "id": "ex-0042", "text": "My goal is to launch the Delta migration by April.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to launch the Ember redesign by May.", "id": "ex-0043", "text": "My goal is to launch the Ember redesign by May.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to finish the Atlas project by June.", "id": "ex-0044", "text": "My goal is to finish the Atlas project by June.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to finish the Borealis roadmap by July.", "id": "ex-0045", "text": "My goal is to finish the Borealis roadmap by July.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to finish the Cedar launch by August.", "id": "ex-0046", "text": "My goal is to finish the Cedar launch by August.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to finish the Delta migration by September.", "id": "ex-0047", "text": "My goal is to finish the Delta migration by September.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to finish the Ember redesign by October.", "id": "ex-0048", "text": "My goal is to finish the Ember redesign by October.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to publish the Atlas project by November.", "id": "ex-0049", "text": "My goal is to publish the Atlas project by November.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to publish the Borealis roadmap by December.", "id": "ex-0050", "text": "My goal is to publish the Borealis roadmap by December.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to publish the Cedar launch by January.", "id": "ex-0051", "text": "My goal is to publish the Cedar launch by January.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to publish the Delta migration by February.", "id": "ex-0052", "text": "My goal is to publish the Delta migration by February.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to publish the Ember redesign by March.", "id": "ex-0053", "text": "My goal is to publish the Ember redesign by March.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to ship the Atlas project by April.", "id": "ex-0054", "text": "My goal is to ship the Atlas project by April.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to ship the Borealis roadmap by May.", "id": "ex-0055", "text": "My goal is to ship the Borealis roadmap by May.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to ship the Cedar launch by June.", "id": "ex-0056", "text": "My goal is to ship the Cedar launch by June.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to ship the Delta migration by July.", "id": "ex-0057", "text": "My goal is to ship the Delta migration by July.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to ship the Ember redesign by August.", "id": "ex-0058", "text": "My goal is to ship the Ember redesign by August.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to migrate the Atlas project by September.", "id": "ex-0059", "text": "My goal is to migrate the Atlas project by September.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to migrate the Borealis roadmap by October.", "id": "ex-0060", "text": "My goal is to migrate the Borealis roadmap by October.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to migrate the Cedar launch by November.", "id": "ex-0061", "text": "My goal is to migrate the Cedar launch by November.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to migrate the Delta migration by December.", "id": "ex-0062", "text": "My goal is to migrate the Delta migration by December.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to migrate the Ember redesign by January.", "id": "ex-0063", "text": "My goal is to migrate the Ember redesign by January.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to redesign the Atlas project by February.", "id": "ex-0064", "text": "My goal is to redesign the Atlas project by February.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to redesign the Borealis roadmap by March.", "id": "ex-0065", "text": "My goal is to redesign the Borealis roadmap by March.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to redesign the Cedar launch by April.", "id": "ex-0066", "text": "My goal is to redesign the Cedar launch by April.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to redesign the Delta migration by May.", "id": "ex-0067", "text": "My goal is to redesign the Delta migration by May.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to redesign the Ember redesign by June.", "id": "ex-0068", "text": "My goal is to redesign the Ember redesign by June.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to document the Atlas project by July.", "id": "ex-0069", "text": "My goal is to document the Atlas project by July.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to document the Borealis roadmap by August.", "id": "ex-0070", "text": "My goal is to document the Borealis roadmap by August.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to document the Cedar launch by September.", "id": "ex-0071", "text": "My goal is to document the Cedar launch by September.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to document the Delta migration by October.", "id": "ex-0072", "text": "My goal is to document the Delta migration by October.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to document the Ember redesign by November.", "id": "ex-0073", "text": "My goal is to document the Ember redesign by November.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to automate the Atlas project by December.", "id": "ex-0074", "text": "My goal is to automate the Atlas project by December.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to automate the Borealis roadmap by January.", "id": "ex-0075", "text": "My goal is to automate the Borealis roadmap by January.", "trust_level": "user"}
+{"expected_kind": "goal", "expected_quote": "My goal is to automate the Cedar launch by February.", "id": "ex-0076", "text": "My goal is to automate the Cedar launch by February.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the contract to Maya on Monday.", "id": "ex-0077", "text": "I will send the contract to Maya on Monday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the contract to Priya on Tuesday.", "id": "ex-0078", "text": "I will send the contract to Priya on Tuesday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the contract to Jonas on Wednesday.", "id": "ex-0079", "text": "I will send the contract to Jonas on Wednesday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the contract to Elena on Thursday.", "id": "ex-0080", "text": "I will send the contract to Elena on Thursday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the contract to Omar on Friday.", "id": "ex-0081", "text": "I will send the contract to Omar on Friday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the contract to Sofia on Saturday.", "id": "ex-0082", "text": "I will send the contract to Sofia on Saturday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the contract to Liam on Sunday.", "id": "ex-0083", "text": "I will send the contract to Liam on Sunday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the contract to Nadia on Monday.", "id": "ex-0084", "text": "I will send the contract to Nadia on Monday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the contract to Ravi on Tuesday.", "id": "ex-0085", "text": "I will send the contract to Ravi on Tuesday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the contract to Hana on Wednesday.", "id": "ex-0086", "text": "I will send the contract to Hana on Wednesday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the proposal to Maya on Thursday.", "id": "ex-0087", "text": "I will send the proposal to Maya on Thursday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the proposal to Priya on Friday.", "id": "ex-0088", "text": "I will send the proposal to Priya on Friday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the proposal to Jonas on Saturday.", "id": "ex-0089", "text": "I will send the proposal to Jonas on Saturday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the proposal to Elena on Sunday.", "id": "ex-0090", "text": "I will send the proposal to Elena on Sunday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the proposal to Omar on Monday.", "id": "ex-0091", "text": "I will send the proposal to Omar on Monday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the proposal to Sofia on Tuesday.", "id": "ex-0092", "text": "I will send the proposal to Sofia on Tuesday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the proposal to Liam on Wednesday.", "id": "ex-0093", "text": "I will send the proposal to Liam on Wednesday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the proposal to Nadia on Thursday.", "id": "ex-0094", "text": "I will send the proposal to Nadia on Thursday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the proposal to Ravi on Friday.", "id": "ex-0095", "text": "I will send the proposal to Ravi on Friday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the proposal to Hana on Saturday.", "id": "ex-0096", "text": "I will send the proposal to Hana on Saturday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the invoice to Maya on Sunday.", "id": "ex-0097", "text": "I will send the invoice to Maya on Sunday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the invoice to Priya on Monday.", "id": "ex-0098", "text": "I will send the invoice to Priya on Monday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the invoice to Jonas on Tuesday.", "id": "ex-0099", "text": "I will send the invoice to Jonas on Tuesday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the invoice to Elena on Wednesday.", "id": "ex-0100", "text": "I will send the invoice to Elena on Wednesday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the invoice to Omar on Thursday.", "id": "ex-0101", "text": "I will send the invoice to Omar on Thursday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the invoice to Sofia on Friday.", "id": "ex-0102", "text": "I will send the invoice to Sofia on Friday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the invoice to Liam on Saturday.", "id": "ex-0103", "text": "I will send the invoice to Liam on Saturday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the invoice to Nadia on Sunday.", "id": "ex-0104", "text": "I will send the invoice to Nadia on Sunday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the invoice to Ravi on Monday.", "id": "ex-0105", "text": "I will send the invoice to Ravi on Monday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the invoice to Hana on Tuesday.", "id": "ex-0106", "text": "I will send the invoice to Hana on Tuesday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the report to Maya on Wednesday.", "id": "ex-0107", "text": "I will send the report to Maya on Wednesday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the report to Priya on Thursday.", "id": "ex-0108", "text": "I will send the report to Priya on Thursday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the report to Jonas on Friday.", "id": "ex-0109", "text": "I will send the report to Jonas on Friday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the report to Elena on Saturday.", "id": "ex-0110", "text": "I will send the report to Elena on Saturday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the report to Omar on Sunday.", "id": "ex-0111", "text": "I will send the report to Omar on Sunday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the report to Sofia on Monday.", "id": "ex-0112", "text": "I will send the report to Sofia on Monday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the report to Liam on Tuesday.", "id": "ex-0113", "text": "I will send the report to Liam on Tuesday.", "trust_level": "user"}
+{"expected_kind": "commitment", "expected_quote": "I will send the report to Nadia on Wednesday.", "id": "ex-0114", "text": "I will send the report to Nadia on Wednesday.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My sister Maya lives in Lisbon.", "id": "ex-0115", "text": "My sister Maya lives in Lisbon.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My sister Priya lives in Berlin.", "id": "ex-0116", "text": "My sister Priya lives in Berlin.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My sister Jonas lives in Osaka.", "id": "ex-0117", "text": "My sister Jonas lives in Osaka.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My sister Elena lives in Toronto.", "id": "ex-0118", "text": "My sister Elena lives in Toronto.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My sister Omar lives in Nairobi.", "id": "ex-0119", "text": "My sister Omar lives in Nairobi.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My sister Sofia lives in Lima.", "id": "ex-0120", "text": "My sister Sofia lives in Lima.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My sister Liam lives in Dublin.", "id": "ex-0121", "text": "My sister Liam lives in Dublin.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My sister Nadia lives in Seoul.", "id": "ex-0122", "text": "My sister Nadia lives in Seoul.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My sister Ravi lives in Cairo.", "id": "ex-0123", "text": "My sister Ravi lives in Cairo.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My sister Hana lives in Perth.", "id": "ex-0124", "text": "My sister Hana lives in Perth.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My brother Maya lives in Lisbon.", "id": "ex-0125", "text": "My brother Maya lives in Lisbon.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My brother Priya lives in Berlin.", "id": "ex-0126", "text": "My brother Priya lives in Berlin.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My brother Jonas lives in Osaka.", "id": "ex-0127", "text": "My brother Jonas lives in Osaka.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My brother Elena lives in Toronto.", "id": "ex-0128", "text": "My brother Elena lives in Toronto.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My brother Omar lives in Nairobi.", "id": "ex-0129", "text": "My brother Omar lives in Nairobi.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My brother Sofia lives in Lima.", "id": "ex-0130", "text": "My brother Sofia lives in Lima.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My brother Liam lives in Dublin.", "id": "ex-0131", "text": "My brother Liam lives in Dublin.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My brother Nadia lives in Seoul.", "id": "ex-0132", "text": "My brother Nadia lives in Seoul.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My brother Ravi lives in Cairo.", "id": "ex-0133", "text": "My brother Ravi lives in Cairo.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My brother Hana lives in Perth.", "id": "ex-0134", "text": "My brother Hana lives in Perth.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My friend Maya lives in Lisbon.", "id": "ex-0135", "text": "My friend Maya lives in Lisbon.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My friend Priya lives in Berlin.", "id": "ex-0136", "text": "My friend Priya lives in Berlin.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My friend Jonas lives in Osaka.", "id": "ex-0137", "text": "My friend Jonas lives in Osaka.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My friend Elena lives in Toronto.", "id": "ex-0138", "text": "My friend Elena lives in Toronto.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My friend Omar lives in Nairobi.", "id": "ex-0139", "text": "My friend Omar lives in Nairobi.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My friend Sofia lives in Lima.", "id": "ex-0140", "text": "My friend Sofia lives in Lima.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My friend Liam lives in Dublin.", "id": "ex-0141", "text": "My friend Liam lives in Dublin.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My friend Nadia lives in Seoul.", "id": "ex-0142", "text": "My friend Nadia lives in Seoul.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My friend Ravi lives in Cairo.", "id": "ex-0143", "text": "My friend Ravi lives in Cairo.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My friend Hana lives in Perth.", "id": "ex-0144", "text": "My friend Hana lives in Perth.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My colleague Maya lives in Lisbon.", "id": "ex-0145", "text": "My colleague Maya lives in Lisbon.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My colleague Priya lives in Berlin.", "id": "ex-0146", "text": "My colleague Priya lives in Berlin.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My colleague Jonas lives in Osaka.", "id": "ex-0147", "text": "My colleague Jonas lives in Osaka.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My colleague Elena lives in Toronto.", "id": "ex-0148", "text": "My colleague Elena lives in Toronto.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My colleague Omar lives in Nairobi.", "id": "ex-0149", "text": "My colleague Omar lives in Nairobi.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My colleague Sofia lives in Lima.", "id": "ex-0150", "text": "My colleague Sofia lives in Lima.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My colleague Liam lives in Dublin.", "id": "ex-0151", "text": "My colleague Liam lives in Dublin.", "trust_level": "user"}
+{"expected_kind": "relationship", "expected_quote": "My colleague Nadia lives in Seoul.", "id": "ex-0152", "text": "My colleague Nadia lives in Seoul.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Atlas project launches in January.", "id": "ex-0153", "text": "The Atlas project launches in January.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Atlas project expands in February.", "id": "ex-0154", "text": "The Atlas project expands in February.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Atlas project migrates in March.", "id": "ex-0155", "text": "The Atlas project migrates in March.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Atlas project ships in April.", "id": "ex-0156", "text": "The Atlas project ships in April.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Atlas project pauses in May.", "id": "ex-0157", "text": "The Atlas project pauses in May.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Atlas project resumes in June.", "id": "ex-0158", "text": "The Atlas project resumes in June.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Atlas project splits in July.", "id": "ex-0159", "text": "The Atlas project splits in July.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Atlas project merges in August.", "id": "ex-0160", "text": "The Atlas project merges in August.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Atlas project scales in September.", "id": "ex-0161", "text": "The Atlas project scales in September.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Atlas project relaunches in October.", "id": "ex-0162", "text": "The Atlas project relaunches in October.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Borealis project launches in November.", "id": "ex-0163", "text": "The Borealis project launches in November.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Borealis project expands in December.", "id": "ex-0164", "text": "The Borealis project expands in December.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Borealis project migrates in January.", "id": "ex-0165", "text": "The Borealis project migrates in January.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Borealis project ships in February.", "id": "ex-0166", "text": "The Borealis project ships in February.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Borealis project pauses in March.", "id": "ex-0167", "text": "The Borealis project pauses in March.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Borealis project resumes in April.", "id": "ex-0168", "text": "The Borealis project resumes in April.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Borealis project splits in May.", "id": "ex-0169", "text": "The Borealis project splits in May.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Borealis project merges in June.", "id": "ex-0170", "text": "The Borealis project merges in June.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Borealis project scales in July.", "id": "ex-0171", "text": "The Borealis project scales in July.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Borealis project relaunches in August.", "id": "ex-0172", "text": "The Borealis project relaunches in August.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Cedar project launches in September.", "id": "ex-0173", "text": "The Cedar project launches in September.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Cedar project expands in October.", "id": "ex-0174", "text": "The Cedar project expands in October.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Cedar project migrates in November.", "id": "ex-0175", "text": "The Cedar project migrates in November.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Cedar project ships in December.", "id": "ex-0176", "text": "The Cedar project ships in December.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Cedar project pauses in January.", "id": "ex-0177", "text": "The Cedar project pauses in January.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Cedar project resumes in February.", "id": "ex-0178", "text": "The Cedar project resumes in February.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Cedar project splits in March.", "id": "ex-0179", "text": "The Cedar project splits in March.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Cedar project merges in April.", "id": "ex-0180", "text": "The Cedar project merges in April.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Cedar project scales in May.", "id": "ex-0181", "text": "The Cedar project scales in May.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Cedar project relaunches in June.", "id": "ex-0182", "text": "The Cedar project relaunches in June.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Delta project launches in July.", "id": "ex-0183", "text": "The Delta project launches in July.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Delta project expands in August.", "id": "ex-0184", "text": "The Delta project expands in August.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Delta project migrates in September.", "id": "ex-0185", "text": "The Delta project migrates in September.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Delta project ships in October.", "id": "ex-0186", "text": "The Delta project ships in October.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Delta project pauses in November.", "id": "ex-0187", "text": "The Delta project pauses in November.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Delta project resumes in December.", "id": "ex-0188", "text": "The Delta project resumes in December.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Delta project splits in January.", "id": "ex-0189", "text": "The Delta project splits in January.", "trust_level": "user"}
+{"expected_kind": "project", "expected_quote": "The Delta project merges in February.", "id": "ex-0190", "text": "The Delta project merges in February.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually review the backlog every Monday morning.", "id": "ex-0191", "text": "I usually review the backlog every Monday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually review the backlog every Tuesday morning.", "id": "ex-0192", "text": "I usually review the backlog every Tuesday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually review the backlog every Wednesday morning.", "id": "ex-0193", "text": "I usually review the backlog every Wednesday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually review the backlog every Thursday morning.", "id": "ex-0194", "text": "I usually review the backlog every Thursday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually review the backlog every Friday morning.", "id": "ex-0195", "text": "I usually review the backlog every Friday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually review the backlog every Saturday morning.", "id": "ex-0196", "text": "I usually review the backlog every Saturday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually review the backlog every Sunday morning.", "id": "ex-0197", "text": "I usually review the backlog every Sunday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually triage the inbox every Monday morning.", "id": "ex-0198", "text": "I usually triage the inbox every Monday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually triage the inbox every Tuesday morning.", "id": "ex-0199", "text": "I usually triage the inbox every Tuesday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually triage the inbox every Wednesday morning.", "id": "ex-0200", "text": "I usually triage the inbox every Wednesday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually triage the inbox every Thursday morning.", "id": "ex-0201", "text": "I usually triage the inbox every Thursday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually triage the inbox every Friday morning.", "id": "ex-0202", "text": "I usually triage the inbox every Friday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually triage the inbox every Saturday morning.", "id": "ex-0203", "text": "I usually triage the inbox every Saturday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually triage the inbox every Sunday morning.", "id": "ex-0204", "text": "I usually triage the inbox every Sunday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually update the changelog every Monday morning.", "id": "ex-0205", "text": "I usually update the changelog every Monday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually update the changelog every Tuesday morning.", "id": "ex-0206", "text": "I usually update the changelog every Tuesday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually update the changelog every Wednesday morning.", "id": "ex-0207", "text": "I usually update the changelog every Wednesday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually update the changelog every Thursday morning.", "id": "ex-0208", "text": "I usually update the changelog every Thursday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually update the changelog every Friday morning.", "id": "ex-0209", "text": "I usually update the changelog every Friday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually update the changelog every Saturday morning.", "id": "ex-0210", "text": "I usually update the changelog every Saturday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually update the changelog every Sunday morning.", "id": "ex-0211", "text": "I usually update the changelog every Sunday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually check the dashboards every Monday morning.", "id": "ex-0212", "text": "I usually check the dashboards every Monday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually check the dashboards every Tuesday morning.", "id": "ex-0213", "text": "I usually check the dashboards every Tuesday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually check the dashboards every Wednesday morning.", "id": "ex-0214", "text": "I usually check the dashboards every Wednesday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually check the dashboards every Thursday morning.", "id": "ex-0215", "text": "I usually check the dashboards every Thursday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually check the dashboards every Friday morning.", "id": "ex-0216", "text": "I usually check the dashboards every Friday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually check the dashboards every Saturday morning.", "id": "ex-0217", "text": "I usually check the dashboards every Saturday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually check the dashboards every Sunday morning.", "id": "ex-0218", "text": "I usually check the dashboards every Sunday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually sync with the team every Monday morning.", "id": "ex-0219", "text": "I usually sync with the team every Monday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually sync with the team every Tuesday morning.", "id": "ex-0220", "text": "I usually sync with the team every Tuesday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually sync with the team every Wednesday morning.", "id": "ex-0221", "text": "I usually sync with the team every Wednesday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually sync with the team every Thursday morning.", "id": "ex-0222", "text": "I usually sync with the team every Thursday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually sync with the team every Friday morning.", "id": "ex-0223", "text": "I usually sync with the team every Friday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually sync with the team every Saturday morning.", "id": "ex-0224", "text": "I usually sync with the team every Saturday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually sync with the team every Sunday morning.", "id": "ex-0225", "text": "I usually sync with the team every Sunday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually refine the outline every Monday morning.", "id": "ex-0226", "text": "I usually refine the outline every Monday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually refine the outline every Tuesday morning.", "id": "ex-0227", "text": "I usually refine the outline every Tuesday morning.", "trust_level": "user"}
+{"expected_kind": "procedural", "expected_quote": "I usually refine the outline every Wednesday morning.", "id": "ex-0228", "text": "I usually refine the outline every Wednesday morning.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Priya Nair works at Acme.", "id": "ex-0229", "text": "Priya Nair works at Acme.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Priya Weber works at Borealis Labs.", "id": "ex-0230", "text": "Priya Weber works at Borealis Labs.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Priya Rossi works at Cedar Systems.", "id": "ex-0231", "text": "Priya Rossi works at Cedar Systems.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Priya Haddad works at Delta Works.", "id": "ex-0232", "text": "Priya Haddad works at Delta Works.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Priya Silva works at Ember Studio.", "id": "ex-0233", "text": "Priya Silva works at Ember Studio.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Priya Chen works at Falcon Group.", "id": "ex-0234", "text": "Priya Chen works at Falcon Group.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Priya Petrov works at Granite Corp.", "id": "ex-0235", "text": "Priya Petrov works at Granite Corp.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Priya Menon works at Harbor Tech.", "id": "ex-0236", "text": "Priya Menon works at Harbor Tech.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Priya Sato works at Indigo Cloud.", "id": "ex-0237", "text": "Priya Sato works at Indigo Cloud.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Priya Okafor works at Juniper Data.", "id": "ex-0238", "text": "Priya Okafor works at Juniper Data.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Jonas Nair works at Acme.", "id": "ex-0239", "text": "Jonas Nair works at Acme.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Jonas Weber works at Borealis Labs.", "id": "ex-0240", "text": "Jonas Weber works at Borealis Labs.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Jonas Rossi works at Cedar Systems.", "id": "ex-0241", "text": "Jonas Rossi works at Cedar Systems.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Jonas Haddad works at Delta Works.", "id": "ex-0242", "text": "Jonas Haddad works at Delta Works.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Jonas Silva works at Ember Studio.", "id": "ex-0243", "text": "Jonas Silva works at Ember Studio.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Jonas Chen works at Falcon Group.", "id": "ex-0244", "text": "Jonas Chen works at Falcon Group.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Jonas Petrov works at Granite Corp.", "id": "ex-0245", "text": "Jonas Petrov works at Granite Corp.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Jonas Menon works at Harbor Tech.", "id": "ex-0246", "text": "Jonas Menon works at Harbor Tech.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Jonas Sato works at Indigo Cloud.", "id": "ex-0247", "text": "Jonas Sato works at Indigo Cloud.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Jonas Okafor works at Juniper Data.", "id": "ex-0248", "text": "Jonas Okafor works at Juniper Data.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Elena Nair works at Acme.", "id": "ex-0249", "text": "Elena Nair works at Acme.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Elena Weber works at Borealis Labs.", "id": "ex-0250", "text": "Elena Weber works at Borealis Labs.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Elena Rossi works at Cedar Systems.", "id": "ex-0251", "text": "Elena Rossi works at Cedar Systems.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Elena Haddad works at Delta Works.", "id": "ex-0252", "text": "Elena Haddad works at Delta Works.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Elena Silva works at Ember Studio.", "id": "ex-0253", "text": "Elena Silva works at Ember Studio.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Elena Chen works at Falcon Group.", "id": "ex-0254", "text": "Elena Chen works at Falcon Group.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Elena Petrov works at Granite Corp.", "id": "ex-0255", "text": "Elena Petrov works at Granite Corp.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Elena Menon works at Harbor Tech.", "id": "ex-0256", "text": "Elena Menon works at Harbor Tech.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Elena Sato works at Indigo Cloud.", "id": "ex-0257", "text": "Elena Sato works at Indigo Cloud.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Elena Okafor works at Juniper Data.", "id": "ex-0258", "text": "Elena Okafor works at Juniper Data.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Omar Nair works at Acme.", "id": "ex-0259", "text": "Omar Nair works at Acme.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Omar Weber works at Borealis Labs.", "id": "ex-0260", "text": "Omar Weber works at Borealis Labs.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Omar Rossi works at Cedar Systems.", "id": "ex-0261", "text": "Omar Rossi works at Cedar Systems.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Omar Haddad works at Delta Works.", "id": "ex-0262", "text": "Omar Haddad works at Delta Works.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Omar Silva works at Ember Studio.", "id": "ex-0263", "text": "Omar Silva works at Ember Studio.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Omar Chen works at Falcon Group.", "id": "ex-0264", "text": "Omar Chen works at Falcon Group.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Omar Petrov works at Granite Corp.", "id": "ex-0265", "text": "Omar Petrov works at Granite Corp.", "trust_level": "user"}
+{"expected_kind": "semantic", "expected_quote": "Omar Menon works at Harbor Tech.", "id": "ex-0266", "text": "Omar Menon works at Harbor Tech.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Atlas team reviewed the draft on Monday.", "id": "ex-0267", "text": "The Atlas team reviewed the draft on Monday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Atlas team reviewed the report on Tuesday.", "id": "ex-0268", "text": "The Atlas team reviewed the report on Tuesday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Atlas team reviewed the proposal on Wednesday.", "id": "ex-0269", "text": "The Atlas team reviewed the proposal on Wednesday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Atlas team reviewed the timeline on Thursday.", "id": "ex-0270", "text": "The Atlas team reviewed the timeline on Thursday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Atlas team reviewed the budget on Friday.", "id": "ex-0271", "text": "The Atlas team reviewed the budget on Friday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Atlas team reviewed the memo on Monday.", "id": "ex-0272", "text": "The Atlas team reviewed the memo on Monday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Atlas team reviewed the deck on Tuesday.", "id": "ex-0273", "text": "The Atlas team reviewed the deck on Tuesday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Atlas team reviewed the brief on Wednesday.", "id": "ex-0274", "text": "The Atlas team reviewed the brief on Wednesday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Borealis team reviewed the draft on Thursday.", "id": "ex-0275", "text": "The Borealis team reviewed the draft on Thursday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Borealis team reviewed the report on Friday.", "id": "ex-0276", "text": "The Borealis team reviewed the report on Friday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Borealis team reviewed the proposal on Monday.", "id": "ex-0277", "text": "The Borealis team reviewed the proposal on Monday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Borealis team reviewed the timeline on Tuesday.", "id": "ex-0278", "text": "The Borealis team reviewed the timeline on Tuesday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Borealis team reviewed the budget on Wednesday.", "id": "ex-0279", "text": "The Borealis team reviewed the budget on Wednesday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Borealis team reviewed the memo on Thursday.", "id": "ex-0280", "text": "The Borealis team reviewed the memo on Thursday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Borealis team reviewed the deck on Friday.", "id": "ex-0281", "text": "The Borealis team reviewed the deck on Friday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Borealis team reviewed the brief on Monday.", "id": "ex-0282", "text": "The Borealis team reviewed the brief on Monday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Cedar team reviewed the draft on Tuesday.", "id": "ex-0283", "text": "The Cedar team reviewed the draft on Tuesday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Cedar team reviewed the report on Wednesday.", "id": "ex-0284", "text": "The Cedar team reviewed the report on Wednesday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Cedar team reviewed the proposal on Thursday.", "id": "ex-0285", "text": "The Cedar team reviewed the proposal on Thursday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Cedar team reviewed the timeline on Friday.", "id": "ex-0286", "text": "The Cedar team reviewed the timeline on Friday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Cedar team reviewed the budget on Monday.", "id": "ex-0287", "text": "The Cedar team reviewed the budget on Monday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Cedar team reviewed the memo on Tuesday.", "id": "ex-0288", "text": "The Cedar team reviewed the memo on Tuesday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Cedar team reviewed the deck on Wednesday.", "id": "ex-0289", "text": "The Cedar team reviewed the deck on Wednesday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Cedar team reviewed the brief on Thursday.", "id": "ex-0290", "text": "The Cedar team reviewed the brief on Thursday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Delta team reviewed the draft on Friday.", "id": "ex-0291", "text": "The Delta team reviewed the draft on Friday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Delta team reviewed the report on Monday.", "id": "ex-0292", "text": "The Delta team reviewed the report on Monday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Delta team reviewed the proposal on Tuesday.", "id": "ex-0293", "text": "The Delta team reviewed the proposal on Tuesday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Delta team reviewed the timeline on Wednesday.", "id": "ex-0294", "text": "The Delta team reviewed the timeline on Wednesday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Delta team reviewed the budget on Thursday.", "id": "ex-0295", "text": "The Delta team reviewed the budget on Thursday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Delta team reviewed the memo on Friday.", "id": "ex-0296", "text": "The Delta team reviewed the memo on Friday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Delta team reviewed the deck on Monday.", "id": "ex-0297", "text": "The Delta team reviewed the deck on Monday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Delta team reviewed the brief on Tuesday.", "id": "ex-0298", "text": "The Delta team reviewed the brief on Tuesday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Ember team reviewed the draft on Wednesday.", "id": "ex-0299", "text": "The Ember team reviewed the draft on Wednesday.", "trust_level": "user"}
+{"expected_kind": "episodic", "expected_quote": "The Ember team reviewed the report on Thursday.", "id": "ex-0300", "text": "The Ember team reviewed the report on Thursday.", "trust_level": "user"}

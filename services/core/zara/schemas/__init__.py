@@ -21,6 +21,7 @@ from zara.schemas.auth import (
     SessionOut,
     UserOut,
 )
+from zara.schemas.chat import ChatAttachment, ChatIn
 from zara.schemas.common import Page
 from zara.schemas.conversations import (
     ConversationCreate,
@@ -30,14 +31,30 @@ from zara.schemas.conversations import (
     MessageCreate,
     MessageOut,
 )
-from zara.schemas.integrations import IntegrationOut, IntegrationSettingsUpdate, IntegrationSyncIn
+from zara.schemas.integrations import (
+    IntegrationConnectIn,
+    IntegrationConnectOut,
+    IntegrationOut,
+    IntegrationSettingsUpdate,
+    IntegrationSyncIn,
+)
 from zara.schemas.memory import (
+    ConsolidationOut,
     MemoryCreate,
     MemoryDetail,
+    MemoryExtractIn,
+    MemoryExtractionRejection,
+    MemoryExtractOut,
     MemoryOut,
+    MemoryRetrievalSource,
+    MemoryRetrievedOut,
+    MemoryRetrieveIn,
+    MemoryRetrieveOut,
     MemorySearchIn,
     MemorySourceOut,
     MemoryUpdate,
+    PersonalizationMemoryOut,
+    PersonalizeOut,
 )
 from zara.schemas.notifications import NotificationOut, NotificationPage
 from zara.schemas.runs import (
@@ -56,18 +73,30 @@ __all__ = [
     "ApprovalOut",
     "ApprovalRejectIn",
     "AuthConfigOut",
+    "ChatAttachment",
+    "ChatIn",
+    "ConsolidationOut",
     "ConversationCreate",
     "ConversationOut",
     "ConversationUpdate",
     "DevTokenIn",
     "DevTokenOut",
     "FeedbackIn",
+    "IntegrationConnectIn",
+    "IntegrationConnectOut",
     "IntegrationOut",
     "IntegrationSettingsUpdate",
     "IntegrationSyncIn",
     "MemoryCreate",
     "MemoryDetail",
+    "MemoryExtractIn",
+    "MemoryExtractOut",
+    "MemoryExtractionRejection",
     "MemoryOut",
+    "MemoryRetrievalSource",
+    "MemoryRetrieveIn",
+    "MemoryRetrieveOut",
+    "MemoryRetrievedOut",
     "MemorySearchIn",
     "MemorySourceOut",
     "MemoryUpdate",
@@ -77,6 +106,8 @@ __all__ = [
     "NotificationPage",
     "Page",
     "PermissionsOut",
+    "PersonalizationMemoryOut",
+    "PersonalizeOut",
     "PreferencesOut",
     "PreferencesUpdate",
     "ProfileOut",

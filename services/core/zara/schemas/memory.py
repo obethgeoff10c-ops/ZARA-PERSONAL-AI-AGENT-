@@ -74,3 +74,108 @@ class MemorySearchIn(BaseModel):
     query: str = Field(min_length=1, max_length=2000)
     kinds: list[str] | None = Field(default=None, max_length=10)
     limit: int = Field(default=20, ge=1, le=50)
+
+
+# --- extraction -------------------------------------------------------------
+
+
+class MemoryExtractIn(BaseModel):
+    """Raw text span to run through the extraction pipeline."""
+
+    text: str = Field(min_length=1, max_length=50_000)
+    source_id: str = Field(min_length=1, max_length=200)
+    source_type: str = Field(default="message", pattern=r"^(message|document|event|agent_run)$")
+    trust_level: str = Field(default="user", pattern=r"^(user|zara|external_untrusted)$")
+    message_id: uuid.UUID | None = None
+    run_id: uuid.UUID | None = None
+    reference_time: datetime | None = None
+
+
+class MemoryExtractionRejection(BaseModel):
+    reason: str
+    candidate: dict[str, Any]
+
+
+class MemoryExtractOut(BaseModel):
+    accepted: list[MemoryOut] = Field(default_factory=list)
+    suggested: list[MemoryOut] = Field(default_factory=list)
+    rejected: list[MemoryExtractionRejection] = Field(default_factory=list)
+
+
+# --- retrieval --------------------------------------------------------------
+
+
+class MemoryRetrieveIn(BaseModel):
+    query: str = Field(min_length=1, max_length=2000)
+    kinds: list[str] | None = Field(default=None, max_length=10)
+    domains: list[str] = Field(default_factory=list, max_length=10)
+    entity_ids: list[uuid.UUID] = Field(default_factory=list, max_length=20)
+    k: int = Field(default=12, ge=1, le=50)
+    token_budget: int = Field(default=1800, ge=100, le=20_000)
+    include_history: bool = False
+
+
+class MemoryRetrievalSource(BaseModel):
+    source_type: str
+    quote: str | None = None
+    observed_at: str | None = None
+
+
+class MemoryRetrievedOut(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: uuid.UUID
+    kind: str
+    title: str | None
+    content: str
+    score: float
+    components: dict[str, float]
+    sources: list[MemoryRetrievalSource] = Field(default_factory=list)
+    importance: float
+    confidence: float
+    sensitivity: str
+    status: str
+    occurred_at: str | None = None
+    due_at: datetime | None = None
+
+
+class MemoryRetrieveOut(BaseModel):
+    items: list[MemoryRetrievedOut] = Field(default_factory=list)
+    retrieval_log_id: str | None = None
+
+
+# --- personalization --------------------------------------------------------
+
+
+class PersonalizationMemoryOut(BaseModel):
+    id: uuid.UUID
+    kind: str
+    title: str | None
+    content: str
+    score: float
+    importance: float
+    confidence: float
+    sources: list[MemoryRetrievalSource] = Field(default_factory=list)
+    occurred_at: str | None = None
+    due_at: datetime | None = None
+
+
+class PersonalizeOut(BaseModel):
+    user_id: uuid.UUID
+    tenant_id: uuid.UUID
+    generated_at: datetime
+    communication_style: str | None = None
+    timezone: str = "UTC"
+    locale: str = "en"
+    preferences: list[PersonalizationMemoryOut] = Field(default_factory=list)
+    goals: list[PersonalizationMemoryOut] = Field(default_factory=list)
+    commitments: list[PersonalizationMemoryOut] = Field(default_factory=list)
+    projects: list[PersonalizationMemoryOut] = Field(default_factory=list)
+    relevant_people: list[PersonalizationMemoryOut] = Field(default_factory=list)
+    recent_memories: list[PersonalizationMemoryOut] = Field(default_factory=list)
+
+
+class ConsolidationOut(BaseModel):
+    decayed: int = 0
+    archived: int = 0
+    expired: int = 0

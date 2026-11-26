@@ -174,6 +174,43 @@ async def append_user_message(
     return message
 
 
+async def append_assistant_message(
+    db: AsyncSession,
+    principal: Principal,
+    conversation_id: uuid.UUID,
+    *,
+    content: str,
+    run_id: uuid.UUID | None = None,
+    citations: list[dict[str, object]] | None = None,
+    content_blocks: list[object] | None = None,
+) -> Message:
+    conversation = await get_conversation(db, principal, conversation_id)
+    now = datetime.now(UTC)
+    message = Message(
+        tenant_id=principal.tenant_id,
+        user_id=principal.user_id,
+        conversation_id=conversation.id,
+        role="assistant",
+        content=content,
+        citations=citations,
+        content_blocks=content_blocks,
+        run_id=run_id,
+        created_at=now,
+    )
+    db.add(message)
+    conversation.last_message_at = now
+    await db.flush()
+    await record_event(
+        db,
+        principal,
+        action="message.created",
+        resource_type="message",
+        resource_id=str(message.id),
+        metadata={"conversation_id": str(conversation.id), "role": "assistant"},
+    )
+    return message
+
+
 async def set_message_feedback(
     db: AsyncSession,
     principal: Principal,

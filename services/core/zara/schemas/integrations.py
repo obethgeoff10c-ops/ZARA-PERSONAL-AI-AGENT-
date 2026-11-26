@@ -30,6 +30,17 @@ class IntegrationSettingsUpdate(BaseModel):
     settings: dict[str, Any]
 
 
+class IntegrationConnectIn(BaseModel):
+    scopes: list[str] | None = None
+    redirect_after: str | None = None
+
+
+class IntegrationConnectOut(BaseModel):
+    authorization_url: str
+    state: str
+    expires_at: datetime
+
+
 class IntegrationSyncIn(BaseModel):
     mode: Literal["incremental", "reconcile"] = "incremental"
 

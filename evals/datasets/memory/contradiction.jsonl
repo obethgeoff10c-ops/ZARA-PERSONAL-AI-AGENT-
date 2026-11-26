@@ -1,0 +1,60 @@
+{"expected": "new_supersedes_old", "id": "contra-0001", "new_text": "The Atlas launch is not on Friday.", "old_text": "The Atlas launch is on Friday."}
+{"expected": "new_supersedes_old", "id": "contra-0002", "new_text": "The Borealis launch is not on Friday.", "old_text": "The Borealis launch is on Friday."}
+{"expected": "new_supersedes_old", "id": "contra-0003", "new_text": "The Cedar launch is not on Friday.", "old_text": "The Cedar launch is on Friday."}
+{"expected": "new_supersedes_old", "id": "contra-0004", "new_text": "The Delta launch is not on Friday.", "old_text": "The Delta launch is on Friday."}
+{"expected": "new_supersedes_old", "id": "contra-0005", "new_text": "The Ember launch is not on Friday.", "old_text": "The Ember launch is on Friday."}
+{"expected": "new_supersedes_old", "id": "contra-0006", "new_text": "The Falcon launch is not on Friday.", "old_text": "The Falcon launch is on Friday."}
+{"expected": "new_supersedes_old", "id": "contra-0007", "new_text": "The Granite launch is not on Friday.", "old_text": "The Granite launch is on Friday."}
+{"expected": "new_supersedes_old", "id": "contra-0008", "new_text": "The Harbor launch is not on Friday.", "old_text": "The Harbor launch is on Friday."}
+{"expected": "new_supersedes_old", "id": "contra-0009", "new_text": "The Indigo launch is not on Friday.", "old_text": "The Indigo launch is on Friday."}
+{"expected": "new_supersedes_old", "id": "contra-0010", "new_text": "The Juniper launch is not on Friday.", "old_text": "The Juniper launch is on Friday."}
+{"expected": "new_supersedes_old", "id": "contra-0011", "new_text": "The Atlas report is not ready.", "old_text": "The Atlas report is ready."}
+{"expected": "new_supersedes_old", "id": "contra-0012", "new_text": "The Borealis report is not ready.", "old_text": "The Borealis report is ready."}
+{"expected": "new_supersedes_old", "id": "contra-0013", "new_text": "The Cedar report is not ready.", "old_text": "The Cedar report is ready."}
+{"expected": "new_supersedes_old", "id": "contra-0014", "new_text": "The Delta report is not ready.", "old_text": "The Delta report is ready."}
+{"expected": "new_supersedes_old", "id": "contra-0015", "new_text": "The Ember report is not ready.", "old_text": "The Ember report is ready."}
+{"expected": "new_supersedes_old", "id": "contra-0016", "new_text": "The Falcon report is not ready.", "old_text": "The Falcon report is ready."}
+{"expected": "new_supersedes_old", "id": "contra-0017", "new_text": "The Granite report is not ready.", "old_text": "The Granite report is ready."}
+{"expected": "new_supersedes_old", "id": "contra-0018", "new_text": "The Harbor report is not ready.", "old_text": "The Harbor report is ready."}
+{"expected": "new_supersedes_old", "id": "contra-0019", "new_text": "The Indigo report is not ready.", "old_text": "The Indigo report is ready."}
+{"expected": "new_supersedes_old", "id": "contra-0020", "new_text": "The Juniper report is not ready.", "old_text": "The Juniper report is ready."}
+{"expected": "new_supersedes_old", "id": "contra-0021", "new_text": "The Atlas budget is not approved.", "old_text": "The Atlas budget is approved."}
+{"expected": "new_supersedes_old", "id": "contra-0022", "new_text": "The Borealis budget is not approved.", "old_text": "The Borealis budget is approved."}
+{"expected": "new_supersedes_old", "id": "contra-0023", "new_text": "The Cedar budget is not approved.", "old_text": "The Cedar budget is approved."}
+{"expected": "new_supersedes_old", "id": "contra-0024", "new_text": "The Delta budget is not approved.", "old_text": "The Delta budget is approved."}
+{"expected": "new_supersedes_old", "id": "contra-0025", "new_text": "The Ember budget is not approved.", "old_text": "The Ember budget is approved."}
+{"expected": "new_supersedes_old", "id": "contra-0026", "new_text": "The Falcon budget is not approved.", "old_text": "The Falcon budget is approved."}
+{"expected": "new_supersedes_old", "id": "contra-0027", "new_text": "The Granite budget is not approved.", "old_text": "The Granite budget is approved."}
+{"expected": "new_supersedes_old", "id": "contra-0028", "new_text": "The Harbor budget is not approved.", "old_text": "The Harbor budget is approved."}
+{"expected": "new_supersedes_old", "id": "contra-0029", "new_text": "The Indigo budget is not approved.", "old_text": "The Indigo budget is approved."}
+{"expected": "new_supersedes_old", "id": "contra-0030", "new_text": "The Juniper budget is not approved.", "old_text": "The Juniper budget is approved."}
+{"expected": "new_supersedes_old", "id": "contra-0031", "new_text": "The Atlas contract will not renew.", "old_text": "The Atlas contract will renew."}
+{"expected": "new_supersedes_old", "id": "contra-0032", "new_text": "The Borealis contract will not renew.", "old_text": "The Borealis contract will renew."}
+{"expected": "new_supersedes_old", "id": "contra-0033", "new_text": "The Cedar contract will not renew.", "old_text": "The Cedar contract will renew."}
+{"expected": "new_supersedes_old", "id": "contra-0034", "new_text": "The Delta contract will not renew.", "old_text": "The Delta contract will renew."}
+{"expected": "new_supersedes_old", "id": "contra-0035", "new_text": "The Ember contract will not renew.", "old_text": "The Ember contract will renew."}
+{"expected": "new_supersedes_old", "id": "contra-0036", "new_text": "The Falcon contract will not renew.", "old_text": "The Falcon contract will renew."}
+{"expected": "new_supersedes_old", "id": "contra-0037", "new_text": "The Granite contract will not renew.", "old_text": "The Granite contract will renew."}
+{"expected": "new_supersedes_old", "id": "contra-0038", "new_text": "The Harbor contract will not renew.", "old_text": "The Harbor contract will renew."}
+{"expected": "new_supersedes_old", "id": "contra-0039", "new_text": "The Indigo contract will not renew.", "old_text": "The Indigo contract will renew."}
+{"expected": "new_supersedes_old", "id": "contra-0040", "new_text": "The Juniper contract will not renew.", "old_text": "The Juniper contract will renew."}
+{"expected": "new_supersedes_old", "id": "contra-0041", "new_text": "The Atlas server cannot scale.", "old_text": "The Atlas server can scale."}
+{"expected": "new_supersedes_old", "id": "contra-0042", "new_text": "The Borealis server cannot scale.", "old_text": "The Borealis server can scale."}
+{"expected": "new_supersedes_old", "id": "contra-0043", "new_text": "The Cedar server cannot scale.", "old_text": "The Cedar server can scale."}
+{"expected": "new_supersedes_old", "id": "contra-0044", "new_text": "The Delta server cannot scale.", "old_text": "The Delta server can scale."}
+{"expected": "new_supersedes_old", "id": "contra-0045", "new_text": "The Ember server cannot scale.", "old_text": "The Ember server can scale."}
+{"expected": "new_supersedes_old", "id": "contra-0046", "new_text": "The Falcon server cannot scale.", "old_text": "The Falcon server can scale."}
+{"expected": "new_supersedes_old", "id": "contra-0047", "new_text": "The Granite server cannot scale.", "old_text": "The Granite server can scale."}
+{"expected": "new_supersedes_old", "id": "contra-0048", "new_text": "The Harbor server cannot scale.", "old_text": "The Harbor server can scale."}
+{"expected": "new_supersedes_old", "id": "contra-0049", "new_text": "The Indigo server cannot scale.", "old_text": "The Indigo server can scale."}
+{"expected": "new_supersedes_old", "id": "contra-0050", "new_text": "The Juniper server cannot scale.", "old_text": "The Juniper server can scale."}
+{"expected": "new_supersedes_old", "id": "contra-0051", "new_text": "The Atlas team is not available.", "old_text": "The Atlas team is available."}
+{"expected": "new_supersedes_old", "id": "contra-0052", "new_text": "The Borealis team is not available.", "old_text": "The Borealis team is available."}
+{"expected": "new_supersedes_old", "id": "contra-0053", "new_text": "The Cedar team is not available.", "old_text": "The Cedar team is available."}
+{"expected": "new_supersedes_old", "id": "contra-0054", "new_text": "The Delta team is not available.", "old_text": "The Delta team is available."}
+{"expected": "new_supersedes_old", "id": "contra-0055", "new_text": "The Ember team is not available.", "old_text": "The Ember team is available."}
+{"expected": "new_supersedes_old", "id": "contra-0056", "new_text": "The Falcon team is not available.", "old_text": "The Falcon team is available."}
+{"expected": "new_supersedes_old", "id": "contra-0057", "new_text": "The Granite team is not available.", "old_text": "The Granite team is available."}
+{"expected": "new_supersedes_old", "id": "contra-0058", "new_text": "The Harbor team is not available.", "old_text": "The Harbor team is available."}
+{"expected": "new_supersedes_old", "id": "contra-0059", "new_text": "The Indigo team is not available.", "old_text": "The Indigo team is available."}
+{"expected": "new_supersedes_old", "id": "contra-0060", "new_text": "The Juniper team is not available.", "old_text": "The Juniper team is available."}

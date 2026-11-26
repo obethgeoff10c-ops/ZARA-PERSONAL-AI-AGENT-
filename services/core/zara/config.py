@@ -86,6 +86,41 @@ class Settings(BaseSettings):
     auth_jwks_cache_seconds: int = Field(default=300, ge=30, le=3600)
     auth_session_ttl_seconds: int = Field(default=2_592_000, ge=300, le=31_536_000)
 
+    # --- OAuth integrations (Google + GitHub) -------------------------------
+    # Envelope encryption: a per-credential DEK is wrapped by the KMS master
+    # key. ``local`` is allowed only outside production (tests/Compose).
+    kms_provider: Literal["local", "aws", "gcp"] = "local"
+    kms_key_id: str = "local-dev"
+    kms_master_key: SecretStr = SecretStr("replace-me-local-kms-master-key-change-me")
+    oauth_state_ttl_seconds: int = Field(default=600, ge=60, le=1800)
+    oauth_state_signing_key: SecretStr = SecretStr("replace-me-local-oauth-state-signing-key")
+    oauth_redirect_base_url: AnyHttpUrl = AnyHttpUrl("http://localhost:8000")
+    oauth_frontend_redirect_url: AnyHttpUrl = AnyHttpUrl(
+        "http://localhost:3000/settings/integrations"
+    )
+    google_oauth_client_id: str | None = None
+    google_oauth_client_secret: SecretStr | None = None
+    github_oauth_client_id: str | None = None
+    github_oauth_client_secret: SecretStr | None = None
+
+    # --- Model gateway (Prompt 06) ------------------------------------------
+    # All model access goes through ``zara.llm``. ``none`` keeps local/test runs
+    # deterministic and offline; production requires the Claude provider.
+    llm_provider: Literal["anthropic", "none"] = "none"
+    anthropic_api_key: SecretStr | None = None
+    anthropic_base_url: AnyHttpUrl = AnyHttpUrl("https://api.anthropic.com")
+    anthropic_model: str = "claude-sonnet-4-5"
+    anthropic_router_model: str = "claude-haiku-4-5"
+    anthropic_api_version: str = "2023-06-01"
+    llm_timeout_seconds: float = Field(default=45.0, gt=0, le=180)
+    llm_max_retries: int = Field(default=2, ge=0, le=5)
+    llm_input_cost_per_mtok: float = Field(default=3.0, ge=0)
+    llm_output_cost_per_mtok: float = Field(default=15.0, ge=0)
+    agent_max_steps: int = Field(default=12, ge=1, le=50)
+    agent_max_tokens: int = Field(default=60_000, ge=1_000, le=1_000_000)
+    agent_max_cost_usd: float = Field(default=1.0, gt=0, le=100)
+    agent_deadline_seconds: int = Field(default=120, ge=5, le=900)
+
     # Abuse controls. Redis is used when configured; the in-process fallback keeps
     # single-node development honest without making Redis a hard dependency.
     rate_limit_enabled: bool = True
@@ -214,6 +249,18 @@ class Settings(BaseSettings):
             raise ValueError("AUTH_ISSUER must use https in production")
         if not self.auth_client_id:
             raise ValueError("AUTH_CLIENT_ID is required in production")
+
+        if self.kms_provider == "local":
+            raise ValueError("KMS_PROVIDER=local is not allowed in production")
+        if "replace-me" in self.kms_master_key.get_secret_value():
+            raise ValueError("KMS_MASTER_KEY must be a real secret in production")
+        if "replace-me" in self.oauth_state_signing_key.get_secret_value():
+            raise ValueError("OAUTH_STATE_SIGNING_KEY must be a real secret in production")
+
+        if self.llm_provider != "anthropic":
+            raise ValueError("LLM_PROVIDER=anthropic is required in production")
+        if self.anthropic_api_key is None or not self.anthropic_api_key.get_secret_value():
+            raise ValueError("ANTHROPIC_API_KEY is required in production")
 
         return self
 

@@ -10,8 +10,10 @@ from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from zara.auth.principal import Principal
-from zara.errors import not_found, validation_failed
+from zara.config import Settings
+from zara.errors import AppError, not_found, validation_failed
 from zara.models import Integration, OAuthCredential
+from zara.services import oauth
 from zara.services.audit import record_event
 
 _EDITABLE_KEYS: dict[str, set[str]] = {
@@ -114,9 +116,29 @@ async def revoke(
     principal: Principal,
     integration_id: uuid.UUID,
     *,
+    settings: Settings | None = None,
+    http_client: Any | None = None,
     ip: str | None = None,
 ) -> None:
     integration = await get_integration(db, principal, integration_id)
+
+    # Revoke at the provider first (best effort): deleting local ciphertext
+    # without telling the provider would leave a live grant behind.
+    if settings is not None and http_client is not None:
+        try:
+            _, access_token, _ = await oauth.load_credential(
+                db, principal, settings, integration.id
+            )
+        except AppError:
+            access_token = None
+        if access_token is not None:
+            await oauth.revoke_at_provider(
+                settings,
+                integration.provider,
+                access_token=access_token,
+                client=http_client,
+            )
+
     integration.status = "revoked"
     integration.revoked_at = datetime.now(UTC)
     await db.execute(

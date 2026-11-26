@@ -212,6 +212,28 @@ class MemoryRevision(UUIDPkMixin, TenantScopedMixin, Base):
     )
 
 
+class BlockedFact(UUIDPkMixin, TenantScopedMixin, UserScopedMixin, Base):
+    """Negative memory: a deleted/forgotten fact that must not be re-extracted.
+
+    See 03 §7 "Delete": the extractor checks this table before writing so a
+    deleted fact cannot be re-created by a later sync of the same source.
+    """
+
+    __tablename__ = "blocked_facts"
+    __table_args__ = (
+        UniqueConstraint("user_id", "fact_hash", name="uq_blocked_facts_user_hash"),
+        Index("ix_blocked_facts_user_key", "user_id", "canonical_key"),
+        {"schema": "memory"},
+    )
+
+    fact_hash: Mapped[bytes] = mapped_column(LargeBinary, nullable=False)
+    canonical_key: Mapped[str | None] = mapped_column(Text)
+    reason: Mapped[str] = mapped_column(Text, nullable=False, server_default=text("'deleted'"))
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False, server_default=text("now()")
+    )
+
+
 class RetrievalLog(UUIDPkMixin, TenantScopedMixin, UserScopedMixin, Base):
     __tablename__ = "retrieval_logs"
     __table_args__ = (

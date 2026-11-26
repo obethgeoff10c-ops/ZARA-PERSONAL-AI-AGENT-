@@ -106,10 +106,36 @@ def test_production_accepts_https_and_real_password() -> None:
             "auth_issuer": "https://clerk.zara.app",
             "auth_client_id": "zara_app",
             "auth_jwks_url": "https://clerk.zara.app/.well-known/jwks.json",
+            "kms_provider": "aws",
+            "kms_master_key": "real-production-master-key",
+            "oauth_state_signing_key": "real-production-state-signing-key",
+            "llm_provider": "anthropic",
+            "anthropic_api_key": "sk-ant-real-key",
         }
     )
 
     assert settings.cors_origin_list == ["https://app.zara.app"]
+
+
+def test_production_requires_llm_provider_and_key() -> None:
+    base = {
+        **BASE,
+        "environment": "production",
+        "cors_origins": "https://app.zara.app",
+        "allowed_hosts": "app.zara.app",
+        "database_url": "postgresql+asyncpg://zara:Str0ngPass@db:5432/zara",
+        "auth_provider": "clerk",
+        "auth_issuer": "https://clerk.zara.app",
+        "auth_client_id": "zara_app",
+        "auth_jwks_url": "https://clerk.zara.app/.well-known/jwks.json",
+        "kms_provider": "aws",
+        "kms_master_key": "real-production-master-key",
+        "oauth_state_signing_key": "real-production-state-signing-key",
+    }
+    with pytest.raises(ValidationError, match="LLM_PROVIDER=anthropic"):
+        Settings(**base)
+    with pytest.raises(ValidationError, match="ANTHROPIC_API_KEY"):
+        Settings(**{**base, "llm_provider": "anthropic"})
 
 
 def test_safe_database_target_never_includes_credentials() -> None:
